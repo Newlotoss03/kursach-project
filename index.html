@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Family Helper</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./index.js"></script>
+</head>
+<body>
+
+  <h1>🏠 Family Helper</h1>
+
+  <div class="container">
+
+    <!-- Пользователи -->
+    <div class="card">
+      <h2>👤 Участники</h2>
+      <input type="text" id="userName" placeholder="Имя">
+      <button onclick="addUser()">Добавить</button>
+      <ul id="userList"></ul>
+    </div>
+
+    <!-- Добавление задачи -->
+    <div class="card">
+      <h2>➕ Новая задача</h2>
+      <input type="text" id="taskTitle" placeholder="Название">
+      
+      <select id="category">
+        <option value="Уборка">Уборка</option>
+        <option value="Покупки">Покупки</option>
+        <option value="Ремонт">Ремонт</option>
+        <option value="Другое">Другое</option>
+      </select>
+
+      <input type="date" id="deadline">
+      <button onclick="addTask()">Добавить задачу</button>
+    </div>
+
+    <!-- Задачи -->
+    <div class="card">
+      <h2>📋 Задачи</h2>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Рейтинг -->
+    <div class="card">
+      <h2>🏆 Рейтинг</h2>
+      <ul id="ratingList"></ul>
+    </div>
+
+    <!-- Сброс -->
+    <div class="card danger">
+      <h2>⚠️ Сброс данных</h2>
+      <button onclick="resetData()">Очистить всё</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
